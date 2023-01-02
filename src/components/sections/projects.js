@@ -182,6 +182,7 @@ const Projects = () => {
               tech
               github
               external
+              isProject
             }
             html
           }
@@ -213,14 +214,14 @@ const Projects = () => {
 
   const projectInner = node => {
     const { frontmatter, html } = node;
-    const { github, external, title, tech } = frontmatter;
+    const { github, external, title, tech, isProject } = frontmatter;
 
     return (
       <div className="project-inner">
         <header>
           <div className="project-top">
             <div className="folder">
-              <Icon name="Folder" />
+              {isProject ? <Icon name="Folder" /> : <Icon name="Bookmark" />}
             </div>
             <div className="project-links">
               {github && (
@@ -264,8 +265,10 @@ const Projects = () => {
   };
 
   return (
-    <StyledProjectsSection>
-      <h2 ref={revealTitle}>Other Noteworthy Projects</h2>
+    <StyledProjectsSection id="projects">
+      <h2 className="numbered-heading" ref={revealTitle}>
+        Open Source Contributions &amp; Certifications
+      </h2>
 
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
         view the archive
