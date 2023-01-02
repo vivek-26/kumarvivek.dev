@@ -267,7 +267,7 @@ const Projects = () => {
   return (
     <StyledProjectsSection id="projects">
       <h2 className="numbered-heading" ref={revealTitle}>
-        Open Source Contributions &amp; Certifications
+        OSS Contribution/Certifications
       </h2>
 
       <Link className="inline-link archive-link" to="/archive" ref={revealArchiveLink}>
