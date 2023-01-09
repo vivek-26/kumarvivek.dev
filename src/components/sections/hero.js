@@ -66,12 +66,12 @@ const Hero = () => {
   const four = (
     <>
       <p>
-        I’m a passionate software engineer specializing in building scalable, robust and resilient
-        backend systems. Currently, I’m focused on building{' '}
+        I’m a software engineer specializing in building scalable, robust and resilient backend
+        systems. Currently, I’m an individual contributor in the{' '}
         <a href="https://segment.com/" target="_blank" rel="noreferrer">
           Segment
-        </a>
-        , a leading customer engagement platform at{' '}
+        </a>{' '}
+        team, a leading customer engagement platform at{' '}
         <a href="https://www.twilio.com/" target="_blank" rel="noreferrer">
           Twilio
         </a>
