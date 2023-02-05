@@ -5,7 +5,7 @@ module.exports = {
     title: 'Vivek Kumar',
     description:
       'Vivek Kumar is a software engineer who specializes in designing and building robust backend systems.',
-    siteUrl: 'https://vivek.sh', // No trailing slash allowed!
+    siteUrl: 'https://kumarvivek.dev', // No trailing slash allowed!
     image: '/og.png', // Path to your image you placed in the 'static' folder
     twitterUsername: '@vkmr26',
   },

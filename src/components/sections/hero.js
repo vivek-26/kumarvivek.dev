@@ -67,7 +67,7 @@ const Hero = () => {
     <>
       <p>
         I’m a software engineer specializing in building scalable, robust and resilient backend
-        systems. Currently, I’m an individual contributor in the{' '}
+        systems. Currently, I’m a Staff Software Engineer in the{' '}
         <a href="https://segment.com/" target="_blank" rel="noreferrer">
           Segment
         </a>{' '}
