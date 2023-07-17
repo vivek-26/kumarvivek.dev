@@ -1,0 +1,17 @@
+# flyctl launch added from .gitignore
+# Project dependencies
+**/.cache
+**/node_modules
+**/yarn-error.log
+**/package-lock.json
+
+# Build directory
+public
+**/.DS_Store
+
+**/.vscode
+**/.idea
+
+# flyctl launch added from .husky/.gitignore
+.husky/**/_
+fly.toml
