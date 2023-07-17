@@ -1,0 +1,20 @@
+# fly.toml app configuration file generated for vivek-portfolio-website on 2023-07-17T12:06:27+05:30
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "vivek-portfolio-website"
+primary_region = "sjc"
+
+[http_service]
+  internal_port = 8043
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
+  [http_service.concurrency]
+    type = "requests"
+    soft_limit = 100
+    hard_limit = 150
+
