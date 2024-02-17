@@ -6,7 +6,6 @@ import { Side } from '@components';
 import { Icon } from '@components/icons';
 
 const StyledSocialList = styled.ul`
-  color: var(--green);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +19,7 @@ const StyledSocialList = styled.ul`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: var(--green);
+    background-color: var(--light-slate);
   }
 
   li {

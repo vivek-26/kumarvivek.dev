@@ -5,7 +5,6 @@ import { email } from '@config';
 import { Side } from '@components';
 
 const StyledLinkWrapper = styled.div`
-  color: var(--green);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,7 +16,7 @@ const StyledLinkWrapper = styled.div`
     width: 1px;
     height: 90px;
     margin: 0 auto;
-    background-color: var(--green);
+    background-color: var(--light-slate);
   }
 
   a {
