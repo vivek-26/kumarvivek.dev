@@ -62,16 +62,16 @@ const Hero = () => {
 
   const one = <h1>Hi, my name is</h1>;
   const two = <h2 className="big-heading">Vivek Kumar.</h2>;
-  const three = <h3 className="big-heading">I love solving challenging problems!</h3>;
+  const three = <h3 className="big-heading">I love solving challenging problems.</h3>;
   const four = (
     <>
       <p>
-        I’m a software engineer specializing in building scalable, robust and resilient backend
-        systems. Currently, I’m a Staff Software Engineer in the{' '}
+        I specialize in building scalable, robust and resilient backend systems. Currently, I’m a{' '}
+        <i>Staff Software Engineer</i> in the{' '}
         <a href="https://segment.com/" target="_blank" rel="noreferrer">
           Segment
         </a>{' '}
-        team, a leading customer engagement platform at{' '}
+        team, a leading <i>Customer Data Platform (CDP)</i> at{' '}
         <a href="https://www.twilio.com/" target="_blank" rel="noreferrer">
           Twilio
         </a>

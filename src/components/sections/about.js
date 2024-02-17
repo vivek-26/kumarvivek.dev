@@ -128,18 +128,19 @@ const About = () => {
   const skills = [
     'Golang',
     'Python',
-    'Node.js',
+    'Node.js,TypeScript',
+    'Rust',
     'AWS',
-    'Docker',
-    'Terraform',
     'Kubernetes',
-    'DynamoDB/MongoDB',
-    'PostgreSQL/MySQL',
+    'Terraform',
+    'Docker',
+    'DynamoDB,MongoDB',
+    'PostgreSQL,MySQL',
     'Kafka',
     'Redis',
-    'Prometheus',
-    'Jenkins/BuildKite',
-    'Git/GitHub/BitBucket',
+    'DataDog,Prometheus',
+    'Jenkins,BuildKite',
+    'Git,GitHub,BitBucket',
   ];
 
   return (
@@ -150,13 +151,13 @@ const About = () => {
         <StyledText>
           <div>
             <p>
-              A seasoned techie with 6 years of experience spanning a wide range of technologies
+              A seasoned techie with 7+ years of experience spanning a wide range of technologies
               like Web App Backends, APIs, DevOps and Infrastructure automation etc. Passionate
               about designing and developing highly scalable software on Cloud. Always looking for
               exciting problems to solve!
             </p>
 
-            <p>A few tools/technologies I’m familiar with:</p>
+            <p>A few technologies/tools I’m familiar with:</p>
           </div>
 
           <ul className="skills-list">
