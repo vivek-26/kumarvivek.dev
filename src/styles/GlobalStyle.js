@@ -74,7 +74,7 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
+    background-image: linear-gradient(rgba(2, 12, 27, 0.9),rgba(2, 12, 27, 0.9)), url('https://s7d5.scene7.com/is/image/Anthropologie/39763966_049_b3?$a15-pdp-detail-shot$&fit=constrain&qlt=80&wid=683');
     color: var(--slate);
     font-family: var(--font-sans);
     font-size: var(--fz-xl);
