@@ -82,8 +82,8 @@ const Footer = () => {
       .then(json => {
         const { stargazers_count, forks_count } = json;
         setGitHubInfo({
-          stars: stargazers_count,
-          forks: forks_count,
+          stars: `${(stargazers_count / 1000).toFixed(1)}k`,
+          forks: `${(forks_count / 1000).toFixed(1)}k`,
         });
       })
       .catch(e => console.error(e));
