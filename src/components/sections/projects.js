@@ -163,6 +163,16 @@ const StyledProject = styled.li`
       }
     }
   }
+
+  .icon {
+    svg {
+      width: 14px;
+      height: 14px;
+    }
+  }
+  .github-stars {
+    font-size: var(--fz-md);
+  }
 `;
 
 const Projects = () => {
@@ -212,6 +222,31 @@ const Projects = () => {
   const firstSix = projects.slice(0, GRID_LIMIT);
   const projectsToShow = showMore ? projects : firstSix;
 
+  const [githubInfo, setGitHubInfo] = useState({});
+
+  useEffect(() => {
+    // if (process.env.NODE_ENV !== 'production') {
+    //   return;
+    // }
+
+    projects.forEach(({ node }) => {
+      const { frontmatter } = node;
+      const { github } = frontmatter;
+      if (!github) {return;}
+
+      fetch(github.replace('https://github.com', 'https://api.github.com/repos'))
+        .then(response => response.json())
+        .then(json => {
+          const { stargazers_count } = json;
+          setGitHubInfo(prev => ({
+            ...prev,
+            [github]: `${(stargazers_count / 1000).toFixed(1)}k`,
+          }));
+        })
+        .catch(e => console.error(e));
+    });
+  }, []);
+
   const projectInner = node => {
     const { frontmatter, html } = node;
     const { github, external, title, tech, isProject } = frontmatter;
@@ -221,14 +256,9 @@ const Projects = () => {
         <header>
           <div className="project-top">
             <div className="folder">
-              {isProject ? <Icon name="Folder" /> : <Icon name="Bookmark" />}
+              {isProject ? <Icon name="GitHub" /> : <Icon name="Bookmark" />}
             </div>
             <div className="project-links">
-              {github && (
-                <a href={github} aria-label="GitHub Link" target="_blank" rel="noreferrer">
-                  <Icon name="GitHub" />
-                </a>
-              )}
               {external && (
                 <a
                   href={external}
@@ -244,7 +274,17 @@ const Projects = () => {
 
           <h3 className="project-title">
             <a href={external} target="_blank" rel="noreferrer">
-              {title}
+              {title}{' '}
+              {github && githubInfo[github] && (
+                <span>
+                  <span className="icon">
+                    <Icon name="Star" />
+                  </span>
+                  <span className="github-stars">
+                    <span> {githubInfo[github].toLocaleString()} </span>
+                  </span>
+                </span>
+              )}
             </a>
           </h3>
 
