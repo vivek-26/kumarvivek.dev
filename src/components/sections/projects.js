@@ -225,14 +225,16 @@ const Projects = () => {
   const [githubInfo, setGitHubInfo] = useState({});
 
   useEffect(() => {
-    // if (process.env.NODE_ENV !== 'production') {
-    //   return;
-    // }
+    if (process.env.NODE_ENV !== 'production') {
+      return;
+    }
 
     projects.forEach(({ node }) => {
       const { frontmatter } = node;
       const { github } = frontmatter;
-      if (!github) {return;}
+      if (!github) {
+        return;
+      }
 
       fetch(github.replace('https://github.com', 'https://api.github.com/repos'))
         .then(response => response.json())
