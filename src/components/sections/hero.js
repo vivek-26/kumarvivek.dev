@@ -67,11 +67,11 @@ const Hero = () => {
     <>
       <p>
         I specialize in building scalable, robust and resilient backend systems. Currently, I’m a{' '}
-        <i>Staff Software Engineer</i> in the{' '}
+        <i>Staff Software Engineer</i> in{' '}
         <a href="https://segment.com/" target="_blank" rel="noreferrer">
-          Segment
+          Segment,
         </a>{' '}
-        team, a leading <i>Customer Data Platform (CDP)</i> at{' '}
+        a leading <i>Customer Data Platform (CDP)</i> at{' '}
         <a href="https://www.twilio.com/" target="_blank" rel="noreferrer">
           Twilio
         </a>

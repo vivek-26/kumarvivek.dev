@@ -127,9 +127,9 @@ const About = () => {
 
   const skills = [
     'Golang',
+    'Rust',
     'Python',
     'Node.js,TypeScript',
-    'Rust',
     'AWS',
     'Kubernetes',
     'Terraform',
@@ -137,6 +137,7 @@ const About = () => {
     'DynamoDB,MongoDB',
     'PostgreSQL,MySQL',
     'Kafka',
+    'ElasticSearch',
     'Redis',
     'DataDog,Prometheus',
     'Jenkins,BuildKite',
